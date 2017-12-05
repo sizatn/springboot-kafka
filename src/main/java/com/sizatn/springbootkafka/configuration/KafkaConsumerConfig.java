@@ -63,7 +63,7 @@ public class KafkaConsumerConfig {
 		propsMap.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, sessionTimeout);
 		propsMap.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		propsMap.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-		propsMap.put(ConsumerConfig.CLIENT_ID_CONFIG, getUUID() + "_" + getIp());
+		propsMap.put(ConsumerConfig.CLIENT_ID_CONFIG, groupId + getUUID() + "_" + getIp());
 		// 默认是latest，即从最新的开始消费
 		propsMap.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 		return propsMap;
