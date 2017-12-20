@@ -53,8 +53,9 @@ public class KafkaConsumerConfig {
 		propsMap.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		// 默认是latest，即从最新的开始消费
 		propsMap.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, kafkaProperties.getConsumer().getAutoOffsetReset());
-		propsMap.put("security.protocol", "SASL_PLAINTEXT");
-		propsMap.put("sasl.mechanism", "PLAIN");
+		// kafka安全认证
+//		propsMap.put("security.protocol", "SASL_PLAINTEXT");
+//		propsMap.put("sasl.mechanism", "PLAIN");
 		return propsMap;
 	}
 
