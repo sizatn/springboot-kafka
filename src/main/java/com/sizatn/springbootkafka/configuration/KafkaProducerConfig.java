@@ -16,7 +16,7 @@ import org.springframework.kafka.core.ProducerFactory;
 
 /**
  * 
- * @desc kafka生成者配置
+ * @desc kafka生产者配置
  * @author sizatn
  * @date Dec 20, 2017
  */
